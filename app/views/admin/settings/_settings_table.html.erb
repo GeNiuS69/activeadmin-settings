@@ -48,7 +48,7 @@
                                   :as => :text,
                                   :input_html => { :class => "settings-redactor" } %>
                     <% when "bool" %>
-                      <%= f.input :string, as: :boolean, label: '', input_html: { checked: setting.string.present? ? setting.string : [1,true,"true"].include?(setting.default_value) %>
+                      <%= f.input :string, as: :boolean, label: '', input_html: { checked: setting.string.present? ? setting.string : [1,true,"true"].include?(setting.default_value) } %>
                     <% else %>
                       <%= f.input :string, :placeholder => "#{t '.default' }: " + setting.default_value(locale) %>
                     <% end %>
